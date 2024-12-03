@@ -1,7 +1,6 @@
 package locale
 
 import (
-	"fmt"
 	"github.com/wyuu874/zcore/internal/i18nx"
 )
 
@@ -13,7 +12,6 @@ func Translate(lang string, messageID string, templateData map[string]interface{
 		TemplateData: templateData,
 	})
 	if err != nil {
-		fmt.Println(err.Error())
 		return messageID
 	}
 	return msg
